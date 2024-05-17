@@ -16,7 +16,7 @@ Tokenizer tokenizer = Tokenizer::train(training_text, {"<s>", "<b>"}, 50000);
 ```
 Here we provide a training text string, two custom tokens, and the max number of tokens we want the tokenizer to collect. The custom tokens are handy if
 you want your model to be trained to indicate when it has finished it's output. You may also use a token for masked words or other use cases. These custom
-tokens MUST be greater than 1 character long and cannot be the reserved character '<u>' for unknown tokens.
+tokens MUST be greater than 1 character long and cannot be the reserved character '\<u\>' for unknown tokens.
 
 Training should take ~1 min to run with a large file (4 million words or so). To avoid waiting everytime, save your
 tokenizer like so
@@ -42,7 +42,7 @@ string detokenized = tokenizer.detokenize(res);
 
 ## Technical Details
 During training, tokens are selected as follows:
-- the '<u>' token for unknown tokens
+- the '\<u\>' token for unknown tokens
 - user provided custom tokens
 - common whitespace and punctuation tokens
 - all unique characters in the training text
@@ -132,7 +132,7 @@ When parsing 'You are pretty cool' (tokenizing and then detokenizing) we get thi
 ```
 <u>o<u> are pretty cool
 ```
-The tokenizer matched everything except the characters 'Y' and 'u' since those weren't in the training text ('<u>' is for unknown characters). This typically won't happen with a large training text, but it's there still.
+The tokenizer matched everything except the characters 'Y' and 'u' since those weren't in the training text ('\<u\>' is for unknown characters). This typically won't happen with a large training text, but it's there still.
 
 For more specifics I'd just look at the files. Tried my best to comment explain stuff, hopefully it's not to crazy in there. Chow!
 
