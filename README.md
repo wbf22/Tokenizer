@@ -1,5 +1,5 @@
 # Tokenizer
-C++ Tokenizer (sentance piece like) for Ai Language Models
+C++ Tokenizer (sentence piece like) for Ai Language Models
 
 ## Open Source
 This code is open source and free to use in any situation under the MIT license. Feel free to make a pr if you'd like to change something. Cheers!
