@@ -53,7 +53,7 @@ All instance of these tokens are included in the tokenizers tokens, except for t
 When tokenizing the tokenizer walks through the string looking for custom tokens or whitespace and punctuation to split up words. These words are then matched to tokens or split up into sub pieces that match tokens.
 During detokenization, the values are simply converted back to their respective tokens and appended together. 
 
-###Example
+### Example
 Say the training text is 'I am pretty cool'
 Running the training with the training text and a limit of 200 tokens, the tokenizer finds the following tokens
 ```
