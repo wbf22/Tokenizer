@@ -134,6 +134,6 @@ When parsing 'You are pretty cool' (tokenizing and then detokenizing) we get thi
 ```
 The tokenizer matched everything except the characters 'Y' and 'u' since those weren't in the training text ('\<u\>' is for unknown characters). This typically won't happen with a large training text, but it's there still.
 
-For more specifics I'd just look at the files. Tried my best to comment explain stuff, hopefully it's not to crazy in there. Chow!
+For more specifics I'd just look at the files. Tried my best to comment explain stuff, hopefully it's not to crazy in there.
 
 
